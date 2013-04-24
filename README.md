@@ -14,7 +14,7 @@ Python packages:
 * Numpy (http://www.numpy.org/)
 * scikit-learn (http://scikit-learn.org/stable/)
 
-Running ChIPdenovo
+Running Subnet
 ------------------
 #### Command-line usage:
     python subnet.py -n <network_file> -g <gene_matrix_file> -o <output_file> [opts]

@@ -120,8 +120,11 @@ class Subnetwork():
 					if sub_mat.shape[0] == 0:
 						break
 					newclf = clf.fit(sub_mat,label)
-					scores = cross_validation.cross_val_score(newclf,sub_mat,label,cv=5)
-					mean_score = scores.mean()
+					if self.method == 'class':
+						scores = cross_validation.cross_val_score(newclf,sub_mat,label,cv=5)
+						mean_score = scores.mean()
+					else:
+						mean_score = clf.score(sub_mat,label)
 				if mean_score > score:
 					score = mean_score
 					depth += 1
@@ -244,18 +247,18 @@ if __name__=='__main__':
 
 	G, data_dict, label = data_input(net_file, gene_file)
 	start = time.clock()
-	clf = Subnetwork(G, mymethod)
+	myclf = Subnetwork(G, mymethod)
 	if percent < 1:
 		print 'Using randomforest computing gene importance...'
-		clf.sort_gene(data_dict, label,percent)
+		myclf.sort_gene(data_dict, label,percent)
 		end1 = time.clock()
 		print 'finish computing feature importance using '+str((end1-start)/60.0)+' mins.'
 	print 'searching sub-network...'
-	clf.divide_net(data_dict, label)
-	clf.print_net(output,score, objfile)
-	clf.rank_gene(data_dict, score, gene_rank_output)
+	myclf.divide_net(data_dict, label)
+	myclf.print_net(output,score, objfile)
+	myclf.rank_gene(data_dict, score, gene_rank_output)
 	print 'In all '+str(len(del_nodeset))+' nodes from network not inclued in gene expression data.'
 	print 'deleted node:',del_nodeset
-	clf.summary()
+	myclf.summary()
 	end = time.clock()
 	print 'program finished using '+str((end-start)/60.0)+' mins.'

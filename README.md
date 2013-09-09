@@ -17,7 +17,7 @@ Python packages:
 Running Subnet
 ------------------
 #### Command-line usage:
-    python subnet.py -n <network_file> -g <gene_matrix_file> -o <output_file> [opts]
+    python egonet.py -n <network_file> -g <gene_matrix_file> -o <output_file> [opts]
 #### Options:
 	-m <int>	:method of classification or regression (default: class)
 	-t <float>	:percentage of top selected gene for searching (default: 1, no sort)
@@ -26,7 +26,7 @@ Running Subnet
 	-r <txt>	:saved gene list ranked by two measuring methods (default: gene_rank.txt)
 	-h      	:produce this menu
 #### Example:
-    python subnet.py -n sample_data/HumanBinaryHQ_HINT.txt -g sample_data/GSE18864_classification.txt -o HINTclass_svm.txt -f HINTclass_svm.pk -r HINT_class_svm_rank.txt
+    python egonet.py -n sample_data/HumanBinaryHQ_HINT.txt -g sample_data/GSE18864_classification.txt -o HINTclass_svm.txt -f HINTclass_svm.pk -r HINT_class_svm_rank.txt
 Example data are provide in the directory *sample_data/*
 
 Input and Output File

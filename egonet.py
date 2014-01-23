@@ -65,14 +65,7 @@ def rename(tuple_list):
 
 class Subnetwork():
 	'''
-	Random Forest Learner
-
-	Attributes
-	----------
-	rf : integer, optional
-		Nr of trees to learn (default: 101)
-	frac : float, optional
-		fample fraction
+	SVM method for subnetwork seleclteion
 	'''
 	def __init__(self, G=nx.Graph(), method='class'):
 		self.G = G

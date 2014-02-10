@@ -34,7 +34,9 @@ Input and Output File
 1. network file is the adjacency list format
 2. gene matrix file starts with gene name or entrize id as first column and expression values for other columns, the last row starts with "outcome" and labels for each sample
 3. the output files contain the ranked subnetwork by predicting accuracy and ranked genes names using M-value.
+
  M = m*s*i
+ 
 where m is total number of subnetwork contained gene, s is the score of each subnetwork and i is the importance of gene.
 
 Visualize subnetwork

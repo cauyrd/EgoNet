@@ -56,6 +56,6 @@ Author: Rendong Yang
 
 Send email to cauyrd@gmail.com
 
-Referencing Subnet 
+Citation 
 ----------------------
-updating soon!
+Yang, Rendong, et al. "EgoNet: identification of human disease ego-network modules." BMC genomics 15.1 (2014): 314.

@@ -1,6 +1,6 @@
 Introduction
 ------------
-Subnet is implemented by Python and it is designed to detecting disease related subnetwork from a large biological network (PPI, metabolic network) combined with gene expression data.
+EgoNet is implemented by Python and it is designed to detecting disease related subnetwork from a large biological network (PPI, metabolic network) combined with gene expression data.
 
 Pre-installtalation
 -------------------
@@ -14,7 +14,7 @@ Python packages:
 * Numpy (http://www.numpy.org/)
 * scikit-learn (http://scikit-learn.org/stable/)
 
-Running Subnet
+Running EgoNet
 ------------------
 #### Command-line usage:
     python egonet.py -n <network_file> -g <gene_matrix_file> -o <output_file> [opts]
